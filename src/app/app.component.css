@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+}
+
+.navigation {
+  width: 25%;
+}
+
+.main-content {
+  width: 75%;
+}
