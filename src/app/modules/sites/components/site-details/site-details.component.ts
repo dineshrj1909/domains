@@ -8,8 +8,10 @@ import { DomainService } from "src/app/modules/core/services/domain.service";
 })
 export class SiteDetailsComponent implements OnInit {
   searchText: string = "";
+  limitEntries: number = 15;
   domainList = [];
   loading = true;
+  showDialog = false;
 
   constructor(private domainService: DomainService) {}
 
@@ -18,5 +20,9 @@ export class SiteDetailsComponent implements OnInit {
       this.domainList = res;
       this.loading = false;
     });
+  }
+
+  hideDialog(value: boolean) {
+    this.showDialog = value;
   }
 }

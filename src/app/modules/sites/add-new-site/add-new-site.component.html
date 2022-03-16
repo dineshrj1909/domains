@@ -1,0 +1,45 @@
+<div class="dialog" *ngIf="visible" role="dialog">
+    <div class="dialog-content">
+        <div class="dialog-header content-align-center justify-spc-bwn">
+            <h3>Add domain details</h3>
+            <button (click)="hideDialog(false)">X</button>
+        </div>
+        <form class="form" [formGroup]="domainForm" (ngSubmit)="onSubmit()">
+            <div class="form-grid">
+                <p class="form-control">
+                    <label for="name">Domain name* </label>
+                    <input type="text" id="domain" name="domain" formControlName="domain">
+                </p>
+                <p class="form-control">
+                    <label for="name">Storage* </label>
+                    <input type="text" id="storage" name="storage" formControlName="storage">
+                </p>
+
+                <div class="form-control" formArrayName="subdomain">
+                    <div *ngFor="let subdomain of subdomain.controls; let i=index">
+                        <div [formGroupName]="i">
+                            <label for="name">Subdomain </label>
+                            <div class="content-align-center">
+                                <input type="text" formControlName="name" />
+                                <button class="secondary-button" (click)="removeSubdomain(i)">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <button class="secondary-button" type="button" (click)="addSubdomain()">Add subdomain</button>
+                </div>
+                <p class="form-control">
+                    <label for="name">Monthly Visitor* </label>
+                    <input type="text" id="monthlyVisitorCapacity" name="monthlyVisitorCapacity"
+                        formControlName="monthlyVisitorCapacity">
+                </p>
+            </div>
+
+            <p>
+                <button class="primary-button" type="submit">Submit</button>
+            </p>
+        </form>
+    </div>
+</div>

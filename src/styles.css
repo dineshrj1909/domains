@@ -57,6 +57,15 @@ button.primary-button {
   border: none;
 }
 
+button.secondary-button {
+  font-size: 14px;
+  color: var(--primaryColor1);
+  border: solid 1px var(--primaryColor1);
+  padding: 6px 8px;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
 .dropdown {
   padding: 6px 8px;
   min-width: 60px;

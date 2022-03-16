@@ -1,16 +1,16 @@
 <div class="content-align-center justify-spc-bwn">
   <h1 class="page-title">Site Details</h1>
-  <button type="button" class="primary-button">+ Add New Site</button>
+  <button type="button" class="primary-button" (click)="showDialog = true">+ Add New Site</button>
 </div>
 
 <div class="content-align-center">
   <div class="entires-dropdown">
     <label for="entries">Show</label>
 
-    <select name="entries" id="entries" class="dropdown">
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="15">15</option>
+    <select [(ngModel)]="limitEntries" name="entries" id="entries" class="dropdown">
+      <option value="2">2</option>
+      <option value="10">5</option>
+      <option value="15">10</option>
     </select>
 
     <label for="entries">entries</label>
@@ -32,7 +32,8 @@
   <div *ngIf="loading">
     loading content...
   </div>
-  <div role="rowgroup" *ngFor="let domain of domainList | filter:searchText">
+  <div role="rowgroup" *ngFor="let domain of domainList | filter:searchText |slice:0:limitEntries">
     <app-domain-card [domain]="domain"></app-domain-card>
   </div>
 </div>
+<app-add-new-site [visible]="showDialog" (dismiss)="hideDialog($event)"></app-add-new-site>
