@@ -10,6 +10,7 @@ import { DomainService } from "../../core/services/domain.service";
 export class AddNewSiteComponent implements OnInit {
   @Input() visible: boolean = false;
   @Output() dismiss = new EventEmitter<boolean>();
+  @Output() success = new EventEmitter<boolean>();
 
   domainForm = this.fb.group({
     domain: ["", Validators.required],
@@ -53,6 +54,7 @@ export class AddNewSiteComponent implements OnInit {
         .addDomain(this.domainForm.value)
         .subscribe((domain) => {
           this.hideDialog(false);
+          this.success.emit(true);
           window.alert("Succesfully added domain: " + domain.domain);
         });
     } else {

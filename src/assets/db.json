@@ -79,6 +79,13 @@
       ],
       "monthlyVisitorCapacity": "3213",
       "id": 5
+    },
+    {
+      "domain": "dinesh.rj.com",
+      "storage": "70gb",
+      "subdomain": [],
+      "monthlyVisitorCapacity": "123456",
+      "id": 6
     }
   ]
 }

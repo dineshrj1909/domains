@@ -36,4 +36,4 @@
     <app-domain-card [domain]="domain"></app-domain-card>
   </div>
 </div>
-<app-add-new-site [visible]="showDialog" (dismiss)="hideDialog($event)"></app-add-new-site>
+<app-add-new-site [visible]="showDialog" (dismiss)="hideDialog($event)" (success)="fetchDomains()"></app-add-new-site>

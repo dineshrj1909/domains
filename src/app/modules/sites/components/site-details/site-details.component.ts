@@ -16,6 +16,10 @@ export class SiteDetailsComponent implements OnInit {
   constructor(private domainService: DomainService) {}
 
   ngOnInit(): void {
+    this.fetchDomains();
+  }
+
+  fetchDomains() {
     this.domainService.getDomains().subscribe((res) => {
       this.domainList = res;
       this.loading = false;
