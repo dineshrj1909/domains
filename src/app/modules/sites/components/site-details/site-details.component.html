@@ -29,6 +29,9 @@
     </div>
   </div>
 
+  <div *ngIf="loading">
+    loading content...
+  </div>
   <div role="rowgroup" *ngFor="let domain of domainList | filter:searchText">
     <app-domain-card [domain]="domain"></app-domain-card>
   </div>
