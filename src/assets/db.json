@@ -30,7 +30,6 @@
         }
       ]
     },
-
     {
       "id": 2,
       "domain": "xyz.com",
@@ -69,6 +68,17 @@
       "usedDomains": 1,
       "monthlyVisitorCapacity": 10000,
       "montlyVisitor": 2000
+    },
+    {
+      "domain": "die",
+      "storage": "23kb",
+      "subdomain": [
+        {
+          "name": "fd"
+        }
+      ],
+      "monthlyVisitorCapacity": "3213",
+      "id": 5
     }
   ]
 }

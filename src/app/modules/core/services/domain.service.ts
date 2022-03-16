@@ -15,18 +15,6 @@ export class DomainService {
   }
 
   addDomain(domain: Domain): Observable<Domain> {
-    return this.http
-      .post<Domain>("http://localhost:3000/domains", domain)
-      .pipe(catchError(this.handleError("addDomain", domain)));
-  }
-
-  handleError(
-    arg0: string,
-    domain: Domain
-  ): (
-    err: any,
-    caught: Observable<Domain>
-  ) => import("rxjs").ObservableInput<any> {
-    throw new Error("Failded to add domain.");
+    return this.http.post<any>("http://localhost:3000/domains", domain);
   }
 }

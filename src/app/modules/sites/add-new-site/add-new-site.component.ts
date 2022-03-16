@@ -48,13 +48,12 @@ export class AddNewSiteComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.domainForm.value);
     if (this.domainForm.valid) {
       this.domainService
         .addDomain(this.domainForm.value)
         .subscribe((domain) => {
           this.hideDialog(false);
-          window.alert("Succesfully added domain" + domain.domain);
+          window.alert("Succesfully added domain: " + domain.domain);
         });
     } else {
       window.alert("Please enter required fields");
