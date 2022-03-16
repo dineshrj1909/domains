@@ -7,11 +7,32 @@
   padding: 16px 32px;
 }
 
-.subdomain-info {
-  padding: 16px 32px 24px;
+.domain-name {
+  color: var(--neutralColor1);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.domains-count {
+  color: var(--primaryColor1);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.subdomains-wrapper {
+  padding: 16px 32px 8px;
   background-color: var(--neutralColor5);
   border: solid 1px var(--neutralColor4);
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   box-shadow: 0px 3px 1px var(--neutralColor2);
+}
+
+.subdomain-info {
+  margin-bottom: 20px;
+}
+
+.subdomain-name {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
 }

@@ -14,8 +14,6 @@
   padding: 12px 32px;
   background-color: var(--neutralColor5);
   border-radius: 6px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
 }
 
 .domain-table [role="rowgroup"] {

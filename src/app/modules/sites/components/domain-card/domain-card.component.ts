@@ -12,4 +12,8 @@ export class DomainCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  getStorageValue(storage: string) {
+    return parseInt(storage);
+  }
 }

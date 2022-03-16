@@ -20,7 +20,7 @@
 
 <div class="domain-table" role="table" aria-label="Domains">
   <div role="rowgroup">
-    <div class="table-header-row" role="row">
+    <div class="table-header-row grid-table" role="row">
       <span role="columnheader">Domain & Plan Name</span>
       <span role="columnheader">Storage</span>
       <span role="columnheader">Monthly Visitor</span>
@@ -28,7 +28,8 @@
       <span role="columnheader">Status</span>
     </div>
   </div>
-  <div role="rowgroup" *ngFor="let domain of domainList">
+
+  <div role="rowgroup" *ngFor="let domain of domainList | filter:searchText">
     <app-domain-card [domain]="domain"></app-domain-card>
   </div>
 </div>

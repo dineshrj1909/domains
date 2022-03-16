@@ -1,20 +1,22 @@
 export interface Domain {
-  id: Number;
-  domain: String;
-  storage: String;
-  usedStorage: String;
-  domainTag: String;
-  availableDomains: Number;
-  usedDomains: Number;
-  monthlyVisitorCapacity: Number;
-  montlyVisitor: Number;
+  id: number;
+  domain: string;
+  storage: string;
+  usedStorage: string;
+  domainTag: string;
+  status: string;
+  availableDomains: number;
+  usedDomains: number;
+  monthlyVisitorCapacity: number;
+  montlyVisitor: number;
   subdomain: Array<Subdomain>;
 }
 
 export interface Subdomain {
-  id: Number;
-  name: String;
-  usedStorage: String;
-  domainTag: String;
-  montlyVisitor: Number;
+  id: number;
+  name: string;
+  usedStorage: string;
+  domainTag: string;
+  status: string;
+  montlyVisitor: number;
 }

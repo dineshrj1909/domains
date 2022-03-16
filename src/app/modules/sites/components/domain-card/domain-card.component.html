@@ -1,11 +1,44 @@
 <ng-template [ngIf]="domain">
   <div class="domain-card">
-    <div class="domain-info">
-      {{domain.domain}}
+    <div class="domain-info grid-table">
+      <div>
+        <div class="domain-name">
+          {{domain.domain}}
+        </div>
+        <div>
+          Professional Plan
+        </div>
+      </div>
+      <app-progress-bar [max]="getStorageValue(domain.storage)" [value]="getStorageValue(domain.usedStorage)"
+        [description]="domain.usedStorage + ' of ' + domain.storage ">
+      </app-progress-bar>
+      <app-progress-bar [max]="domain.monthlyVisitorCapacity" [value]="domain.montlyVisitor"
+        [description]="domain.montlyVisitor + ' of ' + domain.monthlyVisitorCapacity + ' visitors'">
+      </app-progress-bar>
+      <div class="domains-count">
+        {{(domain.subdomain.length+1)+'/'+domain.availableDomains}}
+      </div>
+      <div *ngIf="domain.status" class="status-pill" [attr.data-status]="domain.status">
+        {{domain.status}}
+      </div>
     </div>
-    <div class="subdomain-info" *ngIf="domain.subdomain.length > 0">
-      <div *ngFor="let subdomain of domain.subdomain">
-        {{subdomain.name}}
+    <div class="subdomains-wrapper" *ngIf="domain.subdomain.length > 0">
+      <div class="subdomain-info grid-table" *ngFor="let subdomain of domain.subdomain">
+        <div class="subdomain-name">
+          {{subdomain.name}}
+        </div>
+        <div>
+          {{subdomain.usedStorage}}
+        </div>
+        <div>
+          {{subdomain.montlyVisitor}}
+        </div>
+        <div *ngIf="subdomain.domainTag" class="status-pill" [attr.data-status]="subdomain.domainTag">
+          {{subdomain.domainTag}}
+        </div>
+        <div *ngIf="subdomain.status" class="status-pill" [attr.data-status]="subdomain.status">
+          {{subdomain.status}}
+        </div>
       </div>
     </div>
   </div>

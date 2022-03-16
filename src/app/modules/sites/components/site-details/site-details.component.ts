@@ -6,17 +6,18 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
   styleUrls: ["./site-details.component.css"],
 })
 export class SiteDetailsComponent implements OnInit {
-  searchText!: String;
+  searchText: string = "";
 
   domainList = [
     {
       id: 1,
-      domain: "xyz.com",
-      storage: "100gb",
+      domain: "abc.com",
+      storage: "200gb",
       usedStorage: "50gb",
       domainTag: "Primary",
       availableDomains: 10,
       usedDomains: 4,
+      status: "Active",
       monthlyVisitorCapacity: 10000,
       montlyVisitor: 100,
       subdomain: [
@@ -25,6 +26,7 @@ export class SiteDetailsComponent implements OnInit {
           name: "abc.xyz.com",
           usedStorage: "10gb",
           domainTag: "Staging",
+          status: "Active",
           montlyVisitor: 700,
         },
         {
@@ -32,6 +34,7 @@ export class SiteDetailsComponent implements OnInit {
           name: "adef.xyz.com",
           usedStorage: "40gb",
           domainTag: "Add On",
+          status: "Active",
           montlyVisitor: 1100,
         },
       ],

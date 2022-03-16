@@ -1,0 +1,18 @@
+.bar-bg {
+  width: 160px;
+  border-radius: 4px;
+  background-color: var(--lightColor4);
+}
+
+.bar-fill {
+  height: 20px;
+  border-radius: 4px;
+  background-color: var(--primaryColor2);
+}
+
+.progress-desc {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
