@@ -1,1 +1,10 @@
-<p>navigation works!</p>
+<div class="nav-wrapper">
+  <app-profile-content></app-profile-content>
+  <ul class="nav-list">
+    <li *ngFor="let navItem of navigations" class="nav-list-item">
+      <a [routerLink]="navItem.link" [routerLinkActive]="['nav-list-item__active']">
+        {{ navItem.title }}
+      </a>
+    </li>
+  </ul>
+</div>

@@ -5,8 +5,31 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   color: #333;
+  margin: 0;
 }
 
 body * {
   box-sizing: border-box;
+}
+
+:root {
+  --primaryColor1: #5b7cfd;
+  --primaryColor2: #33cc86;
+  --primaryColor3: #ff7557;
+  --primaryColor4: #ffae33;
+  --primaryColor5: #ffcf27;
+  --primaryColor6: #fbe691;
+
+  --lightColor1: #dee5ff;
+  --lightColor2: #cdf5f4;
+  --lightColor3: #ffe5dd;
+  --lightColor4: #d8e0fe;
+  --lightColor5: #ffffff;
+
+  --neutralColor1: #232d42;
+  --neutralColor2: #8a92a6;
+  --neutralColor3: #737b8b;
+  --neutralColor4: #e7eef7;
+  --neutralColor5: #e3e5e8;
+  --neutralColor6: #929292;
 }

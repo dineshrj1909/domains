@@ -3,7 +3,11 @@
 }
 
 .navigation {
-  width: 25%;
+  width: 250px;
+  height: 100vh;
+  overflow: scroll;
+  padding: 100px 0 20px;
+  background-color: var(--primaryColor1);
 }
 
 .main-content {
