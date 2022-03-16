@@ -1,0 +1,12 @@
+<ng-template [ngIf]="domain">
+  <div class="domain-card">
+    <div class="domain-info">
+      {{domain.domain}}
+    </div>
+    <div class="subdomain-info" *ngIf="domain.subdomain.length > 0">
+      <div *ngFor="let subdomain of domain.subdomain">
+        {{subdomain.name}}
+      </div>
+    </div>
+  </div>
+</ng-template>

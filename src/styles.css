@@ -33,3 +33,43 @@ body * {
   --neutralColor5: #e3e5e8;
   --neutralColor6: #929292;
 }
+
+.page-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.content-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.justify-spc-bwn {
+  justify-content: space-between;
+}
+
+button.primary-button {
+  font-size: 14px;
+  color: var(--lightColor5);
+  padding: 14px 16px;
+  background-color: var(--primaryColor1);
+  border-radius: 4px;
+  border: none;
+}
+
+.dropdown {
+  padding: 6px 8px;
+  min-width: 60px;
+  color: var(--primaryColor1);
+  border-color: var(--lightColor4);
+  border-radius: 4px;
+}
+
+.search-bar {
+  padding: 8px 12px;
+  border: none;
+  color: var(--neutralColor2);
+  font-size: 14px;
+  background-color: transparent;
+  min-width: 250px;
+}

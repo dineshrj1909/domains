@@ -11,5 +11,7 @@
 }
 
 .main-content {
-  width: 75%;
+  padding: 32px 56px;
+  background-color: var(--neutralColor4);
+  width: calc(100% - 250px);
 }

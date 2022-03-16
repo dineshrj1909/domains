@@ -20,4 +20,5 @@ li.nav-list-item a.nav-list-item__active,
 li.nav-list-item a:hover {
   background-color: rgba(0, 0, 0, 0.1);
   color: var(--lightColor5);
+  font-weight: 500;
 }
